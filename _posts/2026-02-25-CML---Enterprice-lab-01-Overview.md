@@ -2,7 +2,7 @@ This is the first post in the series of posts about my enterprise lab, this post
 
 ## LAB OVERVIEW and DESIGN DECISIONS
 
-![OSPF Topology](/images/overview.png)
+![OSPF Topology](/images/overview1.png)
 
 ### What is this lab about? And why should you care?
 
