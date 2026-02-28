@@ -1,6 +1,4 @@
-This doc will help you install and test Ansible on WLS2 and CML instance running on a proxmox hypervisor and also how to create a node in a running lab. 
-Unfortunately Cisco never released an official and way to use Ansible with CML, but there is a collection on Ansible galaxy we can use to use. The virl2-client library is also required to be able to connect with CML and use the CML collection in Ansible, so we will install that as well. So the sum off it all is that we will be installing Ansible, the cml collection and the virl2-client library to be able to use Ansible with CML, and get the full functionality with running python scrips instead of more traditional playbooks. It might sound a bit complicated, but I will guide you through the process step by step and you will see that its not that hard to get it up and running.
-If you want to get all the files for this lab, you can find them in the labs/wls folder in the (repository)[https://github.com/dannebrob/CML-bitsize-labs], and you can also find the playbooks and python scripts there as well.
+This guide walks you through installing and testing Ansible on WSL2 and a CML instance running on Proxmox, as well as creating a node inside a running lab. Cisco never released an official Ansible integration for CML, but the community‑built collection on Ansible Galaxy works well—and we’ll use it together with the required virl2-client library. In short, you’ll set up Ansible, the CML collection, and virl2-client so you can automate CML using both playbooks and Python scripts. It may sound like a lot, but the steps are straightforward, and I’ll guide you through everything. All files for this lab, including playbooks and Python scripts, are available in the labs/wls folder of the repository: https://github.com/dannebrob/CML-bitsize-labs..
 
 ## Installing Ansible on Ubuntu 22.04.5 LTS
 
@@ -196,6 +194,6 @@ If everything is working correctly, you should see a message in the output confi
 In this lab, we have successfully installed Ansible on Ubuntu 22.04.5 LTS, set up the necessary libraries to connect with CML, and created a new node in a running lab using Ansible and a Python script. This demonstrates the power of automation with Ansible and how it can be used to manage and interact with network labs like CML efficiently.
 I hope this guide has been helpful in getting you started with Ansible and CML, and that you can now explore more advanced automation tasks in your network labs!
 
-I would love to hear your feedback on this lab and if you have any suggestions for improvements or additional topics you would like to see covered in future labs. Feel free to reach out to me on [LinkedIn](https://www.linkedin.com/in/danielbroback/) or through the (GitHub)[https://github.com/dannebrob/CML-bitsize-labs] repository.
+I would love to hear your feedback on this lab and if you have any suggestions for improvements or additional topics you would like to see covered in future labs. Feel free to reach out to me on [LinkedIn](https://www.linkedin.com/in/danielbroback/) or through the [GitHub](https://github.com/dannebrob/CML-bitsize-labs) repository.
 
 Happy automating!
