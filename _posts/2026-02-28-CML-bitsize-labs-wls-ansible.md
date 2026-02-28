@@ -1,3 +1,10 @@
+---
+title: "Wls – Wls ansible (CML-bitsize-labs)"
+categories: ["wls"]
+source_repo: "CML-bitsize-labs"
+source_path: "labs/wls/wls-ansible.md"
+---
+
 This guide walks you through installing and testing Ansible on WSL2 and a CML instance running on Proxmox, as well as creating a node inside a running lab. Cisco never released an official Ansible integration for CML, but the community‑built collection on Ansible Galaxy works well—and we’ll use it together with the required virl2-client library. In short, you’ll set up Ansible, the CML collection, and virl2-client so you can automate CML using both playbooks and Python scripts. It may sound like a lot, but the steps are straightforward, and I’ll guide you through everything. All files for this lab, including playbooks and Python scripts, are available in the labs/wls folder of the repository: https://github.com/dannebrob/CML-bitsize-labs..
 
 ## Installing Ansible on Ubuntu 22.04.5 LTS

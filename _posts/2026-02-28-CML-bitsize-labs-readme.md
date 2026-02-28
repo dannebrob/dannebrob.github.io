@@ -1,3 +1,10 @@
+---
+title: "01 summarization – Readme (CML-bitsize-labs)"
+categories: ["01-summarization"]
+source_repo: "CML-bitsize-labs"
+source_path: "labs/ospf/01-summarization/readme.md"
+---
+
 # 01- Summarization
 
 ## Learning Objectives
