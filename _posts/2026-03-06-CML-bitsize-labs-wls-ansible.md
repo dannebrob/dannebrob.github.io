@@ -1,5 +1,5 @@
 ---
-title: "Wls – Wls ansible (CML-bitsize-labs)"
+title: "Wls ansible (CML-bitsize-labs)"
 categories: ["wls"]
 source_repo: "CML-bitsize-labs"
 source_path: "labs/wls/wls-ansible.md"

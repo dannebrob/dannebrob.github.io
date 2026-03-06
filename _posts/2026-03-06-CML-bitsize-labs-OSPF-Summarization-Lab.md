@@ -1,5 +1,5 @@
 ---
-title: "01 summarization – OSPF Summarization Lab (CML-bitsize-labs)"
+title: "OSPF Summarization Lab (CML-bitsize-labs)"
 categories: ["01-summarization"]
 source_repo: "CML-bitsize-labs"
 source_path: "labs/ospf/01-summarization/OSPF-Summarization-Lab.md"
