@@ -102,7 +102,7 @@ Answers will be found below in the walkthrough section, but try to answer them o
 ## Walkthrough
 This is a walkthrough of the lab, where you can find the commands and steps to complete the lab tasks. It is recommended to attempt the lab on your own before referring to the walkthrough.
 
-1. **Identify the Networks**: First off, the task is simple: Review the network topology and identify the networks that need to be summarized. That is done with the following command on R1:
+**Identify the Networks**: First off, the task is simple: Review the network topology and identify the networks that need to be summarized. That is done with the following command on R1:
 ```
 show ip interface brief
 show ip ospf interface
@@ -121,7 +121,7 @@ show ip ospf neighbor
 This command will show us the OSPF neighbors and their associated areas. From the output, we can see that R1 is connected to R2 in area 10, and R2 is connected to R3 in area 0. R3 is connected to R4 in area 20. This means that R1 is an internal router in area 10, R2 is an ABR between area 10 and area 0, R3 is an ABR between area 0 and area 20, and R4 is an internal router in area 20.
 
 
-2. **Configure Summarization**: To configure OSPF summarization on R1 for the loopback interfaces, we can use the following command in OSPF router configuration mode:
+**Configure Summarization**: To configure OSPF summarization on R1 for the loopback interfaces, we can use the following command in OSPF router configuration mode:
 
 ```
 router ospf 1
@@ -136,8 +136,9 @@ redistribute static subnets
 ```
 <br>
 This command tells R1 to redistribute the static routes (which are the loopback interfaces lo4, lo5, lo6) into the OSPF network as external routes.
+<br>
 
-3. **Verify Configuration**: After configuring summarization, we can verify that the summary route is being advertised correctly by checking the routing tables on R2 and R3. On R2, we can use the following command:
+**Verify Configuration**: After configuring summarization, we can verify that the summary route is being advertised correctly by checking the routing tables on R2 and R3. On R2, we can use the following command:
 
 ```
 show ip route ospf
