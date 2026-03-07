@@ -122,16 +122,19 @@ This command will show us the OSPF neighbors and their associated areas. From th
 
 
 2. **Configure Summarization**: To configure OSPF summarization on R1 for the loopback interfaces, we can use the following command in OSPF router configuration mode:
+
 ```
 router ospf 1
 area 10 range 10.10.0.0 255.255.252.0
 ```
+<br>
 This command tells R1 to summarize the routes in area 10 into a single summary route of 10.10.0.0/22.
 
 Next is to inject the external routes into the OSPF network. This is done with the following command:
 ```router ospf 1
 redistribute static subnets
 ```
+<br>
 This command tells R1 to redistribute the static routes (which are the loopback interfaces lo4, lo5, lo6) into the OSPF network as external routes.
 
 3. **Verify Configuration**: After configuring summarization, we can verify that the summary route is being advertised correctly by checking the routing tables on R2 and R3. On R2, we can use the following command:
@@ -143,12 +146,16 @@ This command will show us the OSPF routes in the routing table. We should see th
 
 Answers to the Find the Facts questions:
 Find these facts:
+
 Q1: What is the summary route that R1 is advertising for the loopback interfaces?
-   A1: 10.10.0.0/22 
+<br>
+A1: 10.10.0.0/22 
+
 Q2: What is the subnet mask of the summary route?
-   A2: 255.255.252.0
->Q3: Are the individual loopback interfaces still being advertised, or are they being replaced by the summary route? 
-   A3: The individual loopback interfaces are replaced by the summary route.
+<br>A2: 255.255.252.0
+
+Q3: Are the individual loopback interfaces still being advertised, or are they being replaced by the summary route? 
+<br> A3: The individual loopback interfaces are replaced by the summary route.
 
 ## Resources
 - [Cisco OSPF Documentation](https://www.cisco.com/c/en/us/support/docs/ip/open-shortest-path-first-ospf/13684-12.html)

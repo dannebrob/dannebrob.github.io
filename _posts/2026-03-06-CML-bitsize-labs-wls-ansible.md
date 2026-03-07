@@ -5,12 +5,12 @@ source_repo: "CML-bitsize-labs"
 source_path: "labs/wls/wls-ansible.md"
 ---
 
-This guide walks you through installing and testing Ansible on WSL2 and a CML instance running on Proxmox, as well as creating a node inside a running lab. Cisco never released an official Ansible integration for CML, but the community‑built collection on Ansible Galaxy works well—and we’ll use it together with the required virl2-client library. In short, you’ll set up Ansible, the CML collection, and virl2-client so you can automate CML using both playbooks and Python scripts. It may sound like a lot, but the steps are straightforward, and I’ll guide you through everything. All files for this lab, including playbooks and Python scripts, are available in the labs/wls folder of the repository: https://github.com/dannebrob/CML-bitsize-labs..
+This guide walks you through installing and testing Ansible on WSL2 and a CML instance running on Proxmox, as well as creating a node inside a running lab. Cisco never released an official Ansible integration for CML, but the community‑built collection on Ansible Galaxy works well—and we’ll use it together with the required virl2-client library. In short, you’ll set up Ansible, the CML collection, and virl2-client so you can automate CML using both playbooks and Python scripts. It may sound like a lot, but the steps are straightforward, and I’ll guide you through everything. 
 
-## Installing Ansible on Ubuntu 22.04.5 LTS
+# Installing Ansible on Ubuntu 22.04.5 LTS
 You will find all the labs in the Bitsize series on my Github, link to repo: [CML-bitsize-labs](https://github.com/dannebrob/CML-bitsize-labs/tree/main).
 
-# Step 1: Install Ansible and the required libraries
+## Step 1: Install Ansible and the required libraries
 Make sure that you check which version of Ubuntu you are running, this guide will be compatible with the 22.0.4.5 LTS release of Ubuntu. To check the current version installed on WLS run this command
 
 ```bash
@@ -80,7 +80,7 @@ To make it work on my WLS I had to install, since the default python3 on WLS is 
 python3 -m pip install --upgrade httpx httpcore h11
 ```
 
-# Step 2: Test the Ansible to ping the CML server
+## Step 2: Test the Ansible to ping the CML server
 Now all the packages are upp to date and operational.
 So now you, if you don't already have it, have to make a folder where you will store the python scripts, hosts.ini and playbooks, and cd into it. 
 
@@ -119,7 +119,7 @@ ansible-playbook -i hosts.ini test_cml_connection.yml
 If everything is working correctly, you should see a successful ping response from the CML server in the output of the playbook run. This confirms that Ansible is able to ping the CML server correctly.
 
 
-# Step 3: Create a node in a running lab with Ansible
+## Step 3: Create a node in a running lab with Ansible
 Now that we have confirmed that Ansible can connect to CML, we can move on to creating a node in a running lab with Ansible. For this we will need to create a new python file that will create a new node in a running lab.
 
 ```python
