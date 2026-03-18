@@ -48,6 +48,7 @@ The HR, IT and SALES LANs are not configured in any other way, they are just con
 We first need to configure OSPF on R1 and R2, and assign them to Area 0.
 Open up the CLI for R1 and R2 and enter the following commands:
 <br>
+
 ```
 R1:
 router ospf 1
@@ -63,6 +64,7 @@ network 10.10.10.0 0.0.0.3 area 0
 - Now we need to configure R3, R4 and R5 to be part of Area 1, We will configure Area 1 to be a normal area.
 Open up the CLI for R2, R3, R4 and R5 and enter the following commands:
 <br>
+
 ```
 R2:
 router ospf 1
@@ -84,10 +86,11 @@ router ospf 1
 router-id 5.5.5.5
 network 10.20.20.8 0.0.0.3 area 1
 network 10.20.20.12 0.0.0.3 area 1
-
 ```
+<br>
 - Now we need to configure R5 and R6 to be part of Area 2, and we will configure Area 2 to be a totally stubby area.
 Open up the CLI for R5 and R6 and enter the following commands:
+
 ```
 R5:
 router ospf 1
@@ -101,7 +104,9 @@ network 10.30.30.0 0.0.0.3 area 2
 area 2 stub no-summary
 ```
 - We need to configure Area 3 on R3, as a NSSA:
+<br>
 
+```
 R3:
 router ospf 1
 network 10.40.40.0 0.0.0.3 area 3
@@ -112,8 +117,11 @@ router ospf 1
 router-id 8.8.8.8
 network 10.40.40.0 0.0.0.3 area 3
 area 3 nssa
-
+```
+<br>
 - And the last area, area 4, needs to be configured on R4, as a NSSA-TS:
+
+```
 R4:
 router ospf 1
 network 10.50.50.0 0.0.0.3 area 4
@@ -124,7 +132,8 @@ router ospf 1
 router-id 7.7.7.7
 network 10.50.50.0 0.0.0.3 area 4
 area 4 nssa no-summary
-
+```
+<br>
 
 
 2. **Configure Virtual Links**: If necessary, configure virtual links to connect non-backbone areas to the backbone area.
