@@ -5,7 +5,8 @@ source_repo: "CML-bitsize-labs"
 source_path: "labs/ospf/02-OSPF-Stub-Areas/OSPF-Stub-Area-Lab.md"
 ---
 
-[Introduction]
+This lab is part of the Bitsize series, where we will be covering OSPF Stub Areas and Virtual Links. In this lab, we will be configuring OSPF Stub Areas in a network topology, and implementing Virtual Links to connect non-backbone areas to the backbone area. We will also be verifying our OSPF configurations and testing connectivity between different areas of the network.
+
 # OSPF Stub Areas
 You will find all the labs in the Bitsize series on my GitHub, link to repo: [CML-bitsize-labs](https://github.com/dannebrob/CML-bitsize-labs/tree/main).
 
