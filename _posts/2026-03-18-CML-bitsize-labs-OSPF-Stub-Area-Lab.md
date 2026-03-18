@@ -21,6 +21,9 @@ I'm glad you are here, in this lab we will be configuring OSPF Stub Areas in a n
 
 If you need to brush up on the concepts, I have some study notes that you are more than welcome to review, here is the [link](https://github.com/dannebrob/CCNP-study-notes), I'm sure it will help you in your journey towards mastering OSPF, OSPF stub areas and virtual links.
 
+## Design decisions
+This lab is designed to give you hands-on experience with configuring OSPF Stub Areas and Virtual Links. The lab topology is designed to be simple and easy to understand, while still providing enough complexity to allow you to practice the concepts of OSPF Stub Areas and Virtual Links. I have tried to make the lab instructions simple enough to guide you through the configuration process, but I encourage you to not use this as an tutorial and keep you in the "tutorial hell". For the sake of not making the lab too complex, we will be using a simple topology with only a few routers and areas, but it will still provide you with the opportunity to practice the concepts of OSPF Stub Areas and Virtual Links, but what this lacks is real-world complexity, which is something you probably won't find in a real-world scenario. The lab is designed to be completed in a reasonable amount of time, while still providing you with the opportunity to learn and practice the concepts of OSPF Stub Areas and Virtual Links.  
+
 ## Lab Instructions
 1. **Setup**: Clone the lab repository and navigate to the `02-OSPF-Stub-Areas` folder. Review the provided startup configurations for the routers in the lab topology.
 2. **Configuration**: Import the `02-OSPF_Stub_Areas_Lab.yaml` file into the CML environment. 
