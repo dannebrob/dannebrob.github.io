@@ -42,8 +42,7 @@ Follow the instructions in the Lab Tasks to configure OSPF Stub Areas on the app
 
 ## Walkthrough
 0. **Review the Lab Environment**: 
-We have a total of 8 routers in this lab, R1, R2, R3, R4, R5, R6, R7 and R8. None of the routers are configured with OSPF, but they have at least IP addresses and subnet masks configured on their interfaces. The interfaces connecting the routers are using p2p links (/30).
-The HR, IT and SALES LANs are not configured in any other way, they are just connected to the appropriate routers and are assigned IP addresses and subnet masks. The routes have tags with the area they should be configured with. 
+We have a total of 8 routers in this lab, R1, R2, R3, R4, R5, R6, R7 and R8. None of the routers are configured with OSPF, but they have at least IP addresses and subnet masks configured on their interfaces. The interfaces connecting the routers are using p2p links (/30). The routes have tags in CML with the area they should be configured with. 
 
 1. **Configure OSPF Areas**
 - backbone area (Area 0): R1 and R2

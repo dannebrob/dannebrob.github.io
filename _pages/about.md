@@ -4,7 +4,11 @@ title: About
 permalink: /about/
 ---
 
-Welcome to my networking blog! Here, I share insights, tips, and experiences related to building and maintaining professional relationships. Whether you're a seasoned networker or just starting out, you'll find valuable information to help you connect with others and grow your network effectively. Stay tuned for regular updates and feel free to reach out if you have any questions or topics you'd like me to cover!
+I’m Daniel, an IT and network technician specializing in Cisco technologies, automation, and troubleshooting complex environments. 
+
+About This Blog
+
+This blog is my space to share hands‑on labs, network designs, automation experiments, and structured guides from my homelab and professional work. My goal is simple: clear, reproducible documentation that helps both myself and others learn, build, and refine robust network solutions. 
 
 Why dont you look me up on [Github](https://github.com/dannebrob)?
 
