@@ -8,7 +8,6 @@ source_path: "labs/catalyst center/01 - MAB/Replace-printer-in-Catalyst-Center-M
 This is a walkthrough-lab, with some inspiration taken from a real world situation. We were in need of replacing a printer in the network: But I did not get the chance to do it in the production network, so I created this lab to test it out in the Devnet Sandbox environment. This was a great opportunity to test the integration between ISE and Catalyst Center, and to see how MAB works in a real world scenario. 
 
 # Replace printer in Catalyst Center with MAB
-![printer](https://www.cisco.com/c/dam/en/us/td/docs/switches/lan/catalyst-9000/software/release/17-3/configuration_guide/b_173_catalyst_9000_configuration_guide/b_173_catalyst_9000_configuration_guide_chapter_01010.png)
 
 ## Lab Overview
 The printer that will be added will be named Printer1. The task was to ensure that the new printer would be authenticated via MAB and placed in the correct VLAN (VLAN 30 for printers) in the network, and that this information would be visible in Catalyst Center. The lab is designed to simulate the process of adding a printer to a network that uses Cisco Identity Services Engine (ISE) for authentication and Cisco Catalyst Center for network management and visibility. Since both ISE and Catalyst Center is located outside of my regular homelab this lab will be more of a walkthrough that a hands-on lab that will test your capabilities. Still, just follow the steps and you will be able to complete the lab and learn how to MAB a printer in ISE with the help of Catalyst Center, and how to verify that the printer is authenticated and placed in the correct VLAN in Catalyst Center.
@@ -71,7 +70,7 @@ Log in to the ISE GUI with your browser and sign in with the provided credential
 First you need to create a group for the printers in ISE, this will help you to apply specific policies for the printers.
 Navigate to Administration → Identity Management → Groups → Add. Create a group named **"Printers"** and save it.
 
-![ise-groups](https://niksec.com/configuring-cisco-ise-mab-policy-sets/endpoint-group.png)
+![ise-groups](https://i.ibb.co/M58HMkmB/image.png)
 
 **Create Endpoint**:
 Next, you need to create an endpoint for the printer in ISE. This will allow you to manage the printer's authentication and authorization policies.
@@ -83,7 +82,7 @@ mac address: 1111.1111.1111
 Static Group Assignment: Printers
 <br>
 <br>
-![Add endpoint screenshot](https://niksec.com/configuring-cisco-ise-mab-policy-sets/add-endpoint.png)
+![Add endpoint screenshot](https://i.ibb.co/VYBmHTSm/image.png)
 Save the endpoint.
 
 **Create Dynamic VLAN Profile**:
@@ -93,12 +92,11 @@ Name: Permit_VLAN_30
 Common Tasks → VLAN: → ID/name: 30
 Save the profile.
 
-![Authorization profile screenshot](https://niksec.com/configuring-cisco-ise-mab-policy-sets/authorization-profile.png)
+![Authorization profile screenshot](https://i.ibb.co/W4hQC7Gb/image.png)
 
 **Create new Policy Set**:
 Add a new Policy Set for the printer, this will allow you to apply the authorization profile to the printer when it authenticates.
 Navigate to Policy → Policy Sets → Add.
-![Add policy set screenshot](https://niksec.com/configuring-cisco-ise-mab-policy-sets/new-policy.png)
 
 Name the policy set "Printer Policy Set" and click on the plus icon in the Conditions field to add a new condition.
 
@@ -109,6 +107,7 @@ Now save.
 
 Now you will get back to the Policy Set page, giving you an overview of the newly created Policy Set. Make sure that **Default Network Access** is used in the Allowed Protocols / Server Sequence column. Save that as well.
 A check will be preformed to verify that the policy set is valid. 
+![Add policy set screenshot](https://i.ibb.co/6c4NnrYY/image.png)
 
 Continue in the Policy Set page, click on the arrow to the right of the **Printer Policy** Set (under the Vew column) to open the policy set.
 Under the **Authorization Policy** tab, create a new rule by clicking on the plus icon. Name the rule "Printer MAB Rule" and click on the plus icon in the Conditions field to add a new condition.
