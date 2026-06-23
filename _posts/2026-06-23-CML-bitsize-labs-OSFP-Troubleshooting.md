@@ -31,5 +31,5 @@ Follow the instructions in the Lab Tasks to troubleshoot the OSPF on all the app
 
 ## Lab Tasks
 0. **Review the Lab Environment**: Familiarize yourself with the lab environment and the routers involved.
-1. **Review the ticket**: Read the ticket `ticket.md` found in the folder. 
+1. **Review the ticket**: Read the ticket `ticket.txt` found in the folder. 
 1. **Solve the ticket and document the changes**: Verify configuration as you go along and document the changes in the `lab-notebook.txt`, you should also include the show commands you use to verify the configuration.
